@@ -39,14 +39,23 @@
             #region question 5
             //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
             //int pages = 400; and print pages afterward. What do you expect to see, and why?
-            int pages = 400;
-            AddBonusPages(pages);
-            Console.WriteLine(pages);
+            //int pages = 400;
+            //AddBonusPages(pages);
+            //Console.WriteLine(pages);
             /*the expected input is still 400 becuase 
             because I called the function with value type 
             so we sent a saperated version not ther referance
             */
             #endregion
+            #region question 6
+            //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+            //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+            //see, and why?
+            double[] prices= { 25.5, 40.0 };
+            ApplyDiscount(prices);
+            Console.WriteLine($"prices[i] : {prices[0]}");
+            #endregion
+
 
         }
         #region related to question 3
@@ -65,6 +74,12 @@
         static void AddBonusPages(int pages)
         {
             pages += 50;
+        }
+        #endregion
+        #region related to question 6
+        static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
         }
         #endregion 
 
