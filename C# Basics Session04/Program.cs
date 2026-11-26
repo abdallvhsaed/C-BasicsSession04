@@ -31,11 +31,23 @@
             #region question 4
             //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
             //"Clean Code".
-            String title = "Clean Code";
+            //String title = "Clean Code";
 
-            PrintBookTitle(title);
+            //PrintBookTitle(title);
 
             #endregion
+            #region question 5
+            //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            //int pages = 400; and print pages afterward. What do you expect to see, and why?
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
+            /*the expected input is still 400 becuase 
+            because I called the function with value type 
+            so we sent a saperated version not ther referance
+            */
+            #endregion
+
         }
         #region related to question 3
         static void PrintWelcomeMessage()
@@ -49,6 +61,12 @@
             Console.WriteLine($"Book Title: {title}");
         }
         #endregion
+        #region related to question 5
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+        }
+        #endregion 
 
     }
 }
