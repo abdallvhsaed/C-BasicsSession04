@@ -51,9 +51,20 @@
             //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
             //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
             //see, and why?
-            double[] prices= { 25.5, 40.0 };
-            ApplyDiscount(prices);
-            Console.WriteLine($"prices[i] : {prices[0]}");
+            //double[] prices= { 25.5, 40.0 };
+            //ApplyDiscount(prices);
+            //Console.WriteLine($"prices[i] : {prices[0]}");
+            /*the expected output is 20.5 because I sent the referance 
+             * so any changes any variable who has the referance can see it */
+            #endregion
+            #region question 7 
+            //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            //Call it and print pages afterward. How is the result different from question 5 ?
+            int pages = 400;
+            AddBonusPages(ref pages);
+            Console.WriteLine($"the pages are {pages}");
+            /*the expected output is 450 because I sent the referance */
+
             #endregion
 
 
@@ -81,6 +92,13 @@
         {
             prices[0] -= 5;
         }
+        #endregion
+        #region related to question 7
+            //function overloading
+            static void AddBonusPages(ref int pages)
+            {
+                pages += 50;
+            }
         #endregion 
 
     }
