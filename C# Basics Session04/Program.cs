@@ -1,4 +1,7 @@
-﻿namespace C__Basics_Session04
+﻿using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace C__Basics_Session04
 {
     internal class Program
     {
@@ -60,12 +63,27 @@
             #region question 7 
             //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
             //Call it and print pages afterward. How is the result different from question 5 ?
-            int pages = 400;
-            AddBonusPages(ref pages);
-            Console.WriteLine($"the pages are {pages}");
+            //int pages = 400;
+            //AddBonusPages(ref pages);
+            //Console.WriteLine($"the pages are {pages}");
             /*the expected output is 450 because I sent the referance */
 
             #endregion
+            #region question 8
+            //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length
+            //afterward.
+            double[] prices = { 25.5, 40.0, 33.75 };
+            ReplaceArray(ref prices);
+            for (int i =0; i<prices.Length; i++)
+            {
+                Console.WriteLine($"price[{i}] : {prices[i]}");
+            }
+            Console.WriteLine(prices.Length);
+
+
+
+            #endregion 
 
 
         }
@@ -99,7 +117,18 @@
             {
                 pages += 50;
             }
-        #endregion 
+        #endregion
+        #region related to question 8
+        static void ReplaceArray(ref double[] prices)
+        {
+            double[] newPrices = { 10.0, 12.5, 15.0 };
+
+            for(int i = 0; i<newPrices.Length; i++)
+            {
+                prices[i] = newPrices[i];
+            }
+        }
+        #endregion
 
     }
 }
